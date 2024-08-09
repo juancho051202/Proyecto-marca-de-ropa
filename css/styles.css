@@ -8,14 +8,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0.2rem;
     height: 5.88rem;
     background-color: #D9D9D9;
 }
 
 .logo {
     max-width: 200px;
-    width: 100%;
+    width: 145px;
     margin: 0px 0px 0px 15px;
 
 }
@@ -42,15 +41,57 @@ a {
     text-decoration: none;
 }
 
-.carrito {
-    margin: 0px 30px 0px 30px;
+i.fa-solid.fa-cart-shopping {
+    font-size: 30px;
+    color: black;
+    margin: 30px;
 }
 
-/** main */
+.i.fa-solid.fa-bars {
+    display: none;
+}
+
+@media (max-width: 768px){
+    .logo {
+        order: 1;
+    }
+
+    .fa-cart-shopping {
+        order: 2;
+        color: #D9D9D9;
+    }
+
+    .header {
+        background-color: #031926;
+    }
+
+    .navbar {
+        display: none; 
+    }
+
+    .hamburguer-icon {
+        display: block;
+        max-width: 40px;
+        order: -1;
+    }
+
+    i.fa-solid.fa-cart-shopping {
+        color: #D9D9D9;
+    }
+
+    i.fa-solid.fa-bars {
+        font-size: 40px;
+        color: #D9D9D9;
+    }
+
+}
+
+
+/** main: slider; seccion2; seccion3*/
 
 /** slider */
 
-.slider {
+.img-rotator {
     position: relative;
     width: 754px;
     height: 292px;
@@ -58,14 +99,14 @@ a {
     margin: 115px auto 0;
 }
 
-.slider .next,
-.slider .prev {
+.img-rotator .img-next,
+.img-rotator .img-prev {
     position: absolute;
     top: 50%;
-    width: 40%;
-    height: 40%;
+    width: 6%;
+    height: 15%;
     margin-top: -20px;
-    border-radius: 50px;
+    border-radius: 100px;
     line-height: 40px;
     text-align: center;
     cursor: pointer;
@@ -76,29 +117,29 @@ a {
     font-weight: bold;
 }
 
-.slider .next:hover,
-.slider .prev:hover {
+.img-rotator .img-next:hover,
+.img-rotator .img-prev:hover {
     opacity: 1;
     background-color: #D9D9D9;
 }
 
-.slider .prev {
+.img-rotator .img-prev {
     left: -70px;
 }
 
-.slider .prev::before{
+.img-rotator .img-prev::before{
 content: "<";
 }
 
-.slider .next {
+.img-rotator .img-next {
     right: -70px;
 }
 
-.slider .next::before{
+.img-rotator .img-next::before{
 content: ">";
 }
 
-.slider > ul {
+.img-rotator > ul {
     list-style: none;
     position: relative;
     width: 754px;
@@ -107,7 +148,7 @@ content: ">";
     padding: 0;
 }
 
-.slider > ul > li {
+.img-rotator > ul > li {
     overflow: hidden;
     position: absolute;
     z-index: 0;
@@ -117,12 +158,12 @@ content: ">";
     height: 0;
     margin: 0;
     padding: 0;
-    border: 3px solid white;
-    background-color: aqua;
+    border: 3px solid #0000;
+    background-color: #031926;
     cursor: pointer;
 }
 
-.slider > ul > li > img {
+.img-rotator > ul > li > img {
     width: 100%;
     height: 100%;
     background-position: center;
@@ -158,3 +199,5 @@ ul.pantalon {
     max-width: 300px;
     width: 80%;
 }
+
+/** footer */

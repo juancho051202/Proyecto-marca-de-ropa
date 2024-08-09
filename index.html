@@ -7,6 +7,8 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
 
 </head>
@@ -27,14 +29,15 @@
                     </li>
                 </ul>
             </nav>
-            <img src="./images/shopping.car.png" alt="carrito" class="carrito">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-bars"></i>
         </div>
     </header>
 
     <main class="main">
-        <section class="slider">
-            <div class="prev"></div>
-            <div class="next"></div>
+        <div class="slider img-rotator">
+            <div class="img-prev"></div>
+            <div class="img-next"></div>
             <ul>
                 <li>
                     <img src="./images/pantalon2.jpg" alt="">
@@ -52,7 +55,7 @@
                     <img src="./images/cuadros.jpg" alt="">
                 </li>
             </ul>
-        </section>
+        </div>
         <section class="pantaloneta-nueva-coleccion">
             <div class="seccion2"><h1>NUEVA COLECCIÓN</h1>
                 <ul class="pantaloneta">
@@ -89,6 +92,14 @@
     </main>
 
     <footer class="footer">Pie de página</footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="./js/slider.js"></script>
+
+    <script>    
+    $(".img-rotator").hiSlide();
+    </script>
+
     
     <script src="./js/scripts.js"></script>
 </body>
