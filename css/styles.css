@@ -234,3 +234,38 @@ ul.pantalon {
 }
 
 /** footer */
+
+ul.Iconos-redes {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.container-footer {
+    background-color: #A7BDC7;
+    display: flex;
+}
+
+.redes-sociales {
+    margin: 20px 330px 20px 50px;
+}
+
+.logo-footer {
+    width: 130px;
+}
+
+.ayuda {
+    font-size: 12px;
+    display: ruby;
+    margin: 20px 40px 20px 40px;
+}
+
+.contáctanos {
+    font-size: 12px;
+    display: ruby;
+    margin: 20px 40px 20px 40px;
+}
+
+h2 {
+    font-size: 25px;
+}
