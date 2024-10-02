@@ -30,6 +30,7 @@ body {
     font-size: 16px;
     justify-content: left;
     gap: 20px;
+    font-family: "Playfair Display", serif;
 }
 
 .navbar {
@@ -58,11 +59,8 @@ i.fa-solid.fa-bars {
 
     .fa-cart-shopping {
         order: 2;
-        color: #D9D9D9;
-    }
-
-    .header {
-        background-color: #031926;
+        color: #031926;
+        padding: 20px;
     }
 
     .navbar {
@@ -70,13 +68,14 @@ i.fa-solid.fa-bars {
     }
 
     i.fa-solid.fa-cart-shopping {
-        color: #D9D9D9;
+        color: #031926;
     }
 
     i.fa-solid.fa-bars {
         display: block; 
         font-size: 25px;
-        color: #D9D9D9;
+        color: #031926;
+        padding: 20px;
     }
 
 }
@@ -164,50 +163,46 @@ content: ">";
     background-position: center;
 }
 
+.slider.img-rotator {
+    display: flex;
+}
+
 /** seccion2 */
 
 h1 {
     color: #D9D9D9;
-    border: 2px solid;
     margin: 10px 20px 10px 20px;
+    font-family: "Playfair Display", serif;
 }
 
 .seccion2 {
     margin: 20px;
-    border: 2px solid green;
+}
+
+li.img {
+    flex-basis: 30%;
 }
 
 ul.pantaloneta {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 2rem;
     list-style: none;
-}
-
-.pantaloneta1,
-.pantaloneta3 {
-    max-width: 300px;
-    width: 80%;
-}
-
-.pantaloneta2 {
-    max-width: 300px;
-    width: 88%;
+    flex-wrap: wrap;
 }
 
 .pantaloneta1,
 .pantaloneta2,
 .pantaloneta3 {
-    border: 2px;
-    border-color: #A7BDC7;
+    max-width: 330px;
+    width: 80%;
 }
 
 /** seccion3 */
 
 .seccion3 {
     margin: 20px;
-    border: 2px solid green;
 }
 
 ul.pantalon {
@@ -218,19 +213,35 @@ ul.pantalon {
     list-style: none;
 }
 
-.pantalon1 {
-    max-width: 300px;
-    width: 80%;
+.prenda {
+    height: 22rem;
+    width: 100%;
+}
+@media ( max-width: 992px ) {
+    li.img {
+        flex-basis: 46%;
+    }
+}
+@media ( max-width: 768px ) {
+    li.img {
+        flex-basis: 40%;
+    }
+}
+@media ( max-width: 567px ) {
+    li.img {
+        flex-basis: 100%;
+    }
+}
+
+.pantalon1,
+.pantalon3 {
+    /* max-width: 300px;
+    width: 80%; */
 }
 
 .pantalon2 {
-    max-width: 300px;
-    width: 88%;
-}
-
-.pantalon3 {
-    max-width: 300px;
-    width: 80%;
+    /* max-width: 330px;
+    width: 88%; */
 }
 
 @media (max-width: 768px) {
@@ -255,40 +266,37 @@ ul.Iconos-redes {
 .container-footer {
     background-color: #A7BDC7;
     display: flex;
-    border: 5px solid green;
-    margin: 30px 0px;
+    padding: 30px 2rem;
+    justify-content: space-between;
 }
 
 .redes-sociales {
-    margin: 60px 310px 60px 70px;
-    border: 2px solid blue;
+    display: flow;
 }
 
 .logo-footer {
     width: 130px;
-    border: 2px solid;
 }
 
 .ayuda {
     font-size: 12px;
     display: flex;
     margin: 20px 40px 0px 40px;
-    border: 2px solid yellow;
     align-items: center;
     gap: 5px;
     justify-content: center;
+    font-family: "Playfair Display", serif;
 }
 
 .contáctanos {
     font-size: 12px;
     display: flex;
     margin: 0px 40px 20px 40px;
-    border: 2px solid yellow;
     align-items: center;
     gap: 5px;
     justify-content: center;
+    font-family: "Playfair Display", serif;
 }
-
 
 h2 {
     font-size: 25px;
@@ -298,7 +306,35 @@ i.fa-sharp.fa-solid.fa-plus {
     display: none;
 }
 
+p {
+    font-family: "Playfair Display", serif;
+}
+
+@media ( max-width: 992px) {
+    .container-footer {
+        display: flex;
+    }
+}
+
+@media (max-width: 520px) {
+    .redes-sociales {
+        /* margin: 20px 240px 20px 270px; */
+        padding: 5px 130px;
+    }
+}
+
 @media ( max-width: 768px ) {
+    .slider.img-rotator {
+        margin: 0;
+    }
+
+    .img-rotator .img-prev {
+        left: 25px;
+    }
+
+    .img-rotator .img-next {
+        right: 25px;
+    }
     .container-footer {
         display: flow;
     }
@@ -320,32 +356,12 @@ i.fa-sharp.fa-solid.fa-plus {
         margin: 20px 240px 20px 270px;
     }
 
+    .ayuda {
+        display: flex;
+    }
+
 }
 
-ul {
-    border: 2px solid black;
-}
-h2.contact {
-    border: 2px solid;
-}
-h2.help {
-    border: 2px solid;
-}
-.interaccion {
-    border: 2px solid blue;
-    margin: 5px 0px 5px 0px;
-}
-p {
-    border: 2px solid;
-}
-section.seccion-footer {
-    border: 7px solid aqua;
-}
-li.img.pantalon {
-    border: 2px solid yellow;
-}
-.slider.img-rotator {
-    display: flex;
-    margin: 80px 165px;
-    border: 3px solid yellow;
-}
+
+
+
